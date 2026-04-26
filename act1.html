@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ACT1- Form validation</title>
+</head>
+
+<body>
+    <!--NOTE- Go live to check-->
+    <form name="form1" onsubmit="validate1()">
+       <label>Enter your name</label><br>
+        <input type="text" name="name1"><br><br>
+        <input type="submit" value="Submit">
+        <p id="msg"></p>
+    </form>
+
+   <script>
+        function validate1() {
+            var n= document.forms["form1"]["name1"].value;
+            if (n == "") {
+                alert("please write your name");
+                return false;
+            }
+            else document.write("Your name is saved");
+
+        } 
+    </script>
+</body>
+
+</html>

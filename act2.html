@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ACT2- API Validation</title>
+</head>
+<body>
+    <p>Enter any number between 1 to 100</p>
+    <input id="id1" type="number" min="1" max="100" required>
+    <button onclick="fun1()">Button</button>
+   
+    <p id="result"></p>
+    <script>
+        function fun1() {
+            var input = document.getElementById("id1");
+            if (!input.checkValidity()) {
+                document.getElementById("result").innerHTML = input.validationMessage;
+            } else {
+                document.getElementById("result").innerHTML = "Done";
+            }
+        } 
+    </script>
+</body>
+
+</html>
